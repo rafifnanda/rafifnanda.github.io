@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('/fonts/DMSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #87CEEB; /* Sky blue background */
+    font-family: 'DM Sans', Arial, sans-serif; /* Menggunakan DM Sans */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.canvas {
+    background-color: #FFFFFF; /* White canvas with 2.5D effect */
+    width: 1280px; /* Lebar canvas */
+    height: 720px; /* Tinggi canvas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    text-align: justify; /* Mengatur teks menjadi rata kiri */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    align-items: center; /* Pusatkan vertikal elemen */
+    padding: 20px; /* Padding untuk isi canvas */
+    position: relative; /* Positioning relative untuk konten di dalam */
+}
+
+.canvas img {
+    width: 500px; /* Lebar foto */
+    object-fit: cover; /* Mengatur agar foto terisi kotak tanpa mengubah aspek ratio */
+    border-radius: 10px; /* Border radius untuk membuat sudut foto lebih lembut */
+    margin-right: 20px; /* Jarak antara foto dan teks */
+}
+
+.biodata {
+    flex: 1; /* Memastikan isi biodata mengambil sisa ruang */
+    padding-left: 80px; /* Padding kiri untuk pemisahan dari foto */
+    max-width: 600px; /* Lebar maksimum untuk isi biodata */
+}
+
+.biodata p {
+    font-size: 35px; /* Ukuran teks yang lebih besar */
+    margin-bottom: 15px; /* Jarak bawah teks */
+    margin-left: auto;
+}
+
+.next-button {
+    background-color: #4CAF50; /* Green button color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .next-button {
+        right: 10%;
+        transform: translateX(50%);
+    }
+}
+
+.next-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.prev-button {
+    background-color: #4CAF50; /* Green button color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .prev-button {
+        right: 23%;
+        transform: translateX(50%);
+    }
+}
+
+.next-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
